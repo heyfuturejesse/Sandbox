@@ -1,12 +1,12 @@
 import UIKit
 
-func knitSweater(then: () -> Void) {
-    print("Buy wool")
-    for _ in 1...100 {
-        print("Knit knit knit...")
+func beCool(then: () -> Void) {
+    print("Just putting on my shades...")
+    for _ in 1...3 {
+        print("I'm dope as hell, dude")
     }
     then()
 }
-knitSweater {
-    print("Who wants to buy a sweater?")
+beCool {
+    print("Who wants to wear their hat backwards?")
 }
