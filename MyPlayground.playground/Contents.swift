@@ -227,3 +227,15 @@ print(Banana.name,
       Banana.city,
       Banana.postalCode)
 */
+
+
+
+
+struct App {
+    var name: String
+    private var sales = 0
+    init(name: String) {
+        self.name = name
+    }
+}
+let spotify = App(name: "Spotify")
