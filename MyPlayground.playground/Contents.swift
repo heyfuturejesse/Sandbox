@@ -4,7 +4,7 @@ import UIKit
 
 
 
-// Using closures as parameters when they accept parameters
+//MARK: Using closures as parameters when they accept parameters
 /*
 func beCool(action: (String) -> Void) {
     print ("I'm putting my shades on...")
@@ -21,7 +21,7 @@ beCool { (item: String) in
 
 
 
-// Another example of using closures as parameters when they accept parameters
+//MARK: Another example of using closures as parameters when they accept parameters
 /*
 func study(reviseNotes: (String) -> Void) {
     let notes = "Napoleon was a short, dead dude."
@@ -38,7 +38,7 @@ study { (notes: String) in
 
 
 
-// Arrays are fine too with the "closures as parameters when they accept parameters" concept
+//MARK: Arrays are fine too with the "closures as parameters when they accept parameters" concept
 /*
 func createInterface(positioning: ([String]) -> Void) {
     print("Creating some buttons")
@@ -56,7 +56,7 @@ createInterface { (buttons: [String]) in
 
 
 
-//Capturing values examples
+//MARK: Capturing values examples
 /*
 func travel() -> (String) -> Void {
     var counter = 1
@@ -74,7 +74,7 @@ result("Sydney")
 result("Sydney")
 */
 
-//Another Example - cool way to explain how this works a little differently.
+//MARK: Another Example - cool way to explain how this works a little differently.
 
 /*
 func swingBat() -> () -> Void {
@@ -120,7 +120,7 @@ print(french)
 
 
 
-// Structs
+//MARK: Structs
 // Computed properties
 /*
 struct Sport {
@@ -185,7 +185,7 @@ money.balance = 1_000_001
 
 
 
-//Methods
+//MARK: Methods
 /*
 struct Fruits {
     var cropNumber: Int
@@ -230,7 +230,7 @@ print(Banana.name,
 
 
 
-
+/*
 struct App {
     var name: String
     private var sales = 0
@@ -239,3 +239,93 @@ struct App {
     }
 }
 let spotify = App(name: "Spotify")
+*/
+
+
+
+//MARK: Classes
+
+/*
+class Dog {
+    var name: String
+    var breed: String
+
+    init(name: String, breed: String) {
+        self.name = name
+        self.breed = breed
+    }
+}
+
+let poppy = Dog(name: "Poppy", breed: "Poodle")
+
+*/
+
+//MARK: Classes
+
+// Creating classes
+/*
+class VideoGame {
+    var hero: String
+    var enemy: String
+    init(heroName: String, enemyName: String) {
+        self.hero = heroName
+        self.enemy = enemyName
+    }
+}
+let monkeyIsland = VideoGame(heroName: "Guybrush Threepwood", enemyName: "LeChuck")
+*/
+
+
+
+//MARK: Child Classes / Class Inheritance
+
+/*
+class Cat {
+    var name: String
+    var breed: String
+    
+    init(name: String, breed: String) {
+        self.name = name
+        self.breed = breed
+    }
+}
+
+class exoticShortHair: Cat {
+    init(name: String) {
+        super.init(name: name, breed: "Exotic Short Hair")
+    }
+}
+
+*/
+
+
+
+//MARK: Deinitializers
+
+/*
+class Person {
+    var name = "John Doe"
+
+    init() {
+        print("\(name) is alive!")
+    }
+
+    func printGreeting() {
+        print("Hello, I'm \(name)")
+    }
+    
+    deinit {
+        print("\(name) is no more!")
+    }
+}
+
+
+for _ in 1...3 {
+    let person = Person()
+    person.printGreeting()
+}
+*/
+
+
+
+
