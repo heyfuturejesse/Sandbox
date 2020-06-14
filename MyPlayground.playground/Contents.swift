@@ -143,7 +143,7 @@ print(afl.olympicStatus)
 
 
 
-//Property observers
+//MARK: Property observers
 /*
 struct Progress {
     var task: String
@@ -260,9 +260,8 @@ let poppy = Dog(name: "Poppy", breed: "Poodle")
 
 */
 
-//MARK: Classes
+//MARK: Creating classes
 
-// Creating classes
 /*
 class VideoGame {
     var hero: String
@@ -329,3 +328,107 @@ for _ in 1...3 {
 
 
 
+//MARK: Protocols
+
+/*
+protocol Identifiable {
+    var id: String { get set }
+}
+
+struct User: Identifiable {
+    var id: String
+}
+
+func displayID (thing: Identifiable) {
+    print("My ID is \thing.id")
+}
+
+*/
+
+
+//MARK: Protocol inheritance
+
+
+/*
+protocol Payable {
+    func calculateWages() -> Int
+}
+
+protocol NeedsTraining {
+    func study()
+}
+
+protocol HasVacation {
+    func takeVacation(days: Int)
+}
+
+protocol Employee: Payable, NeedsTraining, HasVacation { }
+
+*/
+
+
+//MARK: Extensions
+
+/*
+extension Int {
+    func squared() -> Int {
+        return self * self
+    }
+}
+
+let number = 8
+number.squared()
+
+extension Int {
+    var isEven: Bool {
+        return self % 2 == 0
+    }
+}
+
+print(number.squared())
+*/
+
+
+//MARK: Protocol extensions
+
+/*
+let fruit = ["Orange", "Apple", "Banana", "Pear"]
+let vegies = Set(["Potato", "Pumpkin", "Peas", "Corn"])
+
+extension Collection {
+    func summarize() {
+        print("There are \(count) of these things:")
+        
+        for name in self {
+            print(name)
+        }
+    }
+}
+
+fruit.summarize()
+vegies.summarize()
+*/
+
+
+//MARK: Protocol-oriented programming
+
+/*
+protocol Identifiable {
+    var id: String { get set }
+    func identify()
+}
+
+extension Identifiable {
+    func identify() {
+        print("My ID is \(id).")
+    }
+}
+
+struct User: Identifiable {
+    var id: String
+}
+
+let jruss = User(id: "jruss")
+jruss.identify()
+
+*/
