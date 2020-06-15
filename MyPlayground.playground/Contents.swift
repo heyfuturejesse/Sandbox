@@ -432,3 +432,95 @@ let jruss = User(id: "jruss")
 jruss.identify()
 
 */
+
+
+
+//MARK: Handling Missing Data
+
+//An optional interger like this is totally possible. The following variable doesn't hold any value at all.
+//var age: Int? = nil
+
+// However we can use this variable later on...
+
+//age = 38
+
+
+
+
+//MARK: Unwrapping optionals
+/*
+var name: String? = nil
+
+if let unwrapped = name {
+    print("\(unwrapped.count) letters")
+} else {
+    print("Missing name.")
+}
+*/
+//If name holds a string, it will be put inside unwrapped as a regular String
+//and we can read its count property inside the condition.
+//Alternatively, if name is empty, the else code will be run.
+
+
+
+
+//MARK: Optional chaining
+
+
+/*
+func albumReleased(in year: Int) -> String? {
+    switch year {
+    case 2006: return "Taylor Swift"
+    case 2008: return "Fearless"
+    case 2010: return "Speak Now"
+    case 2012: return "Red"
+    case 2014: return "1989"
+    case 2017: return "Reputation"
+    default: return nil
+    }
+}
+let album = albumReleased(in: 2020)?.uppercased()
+*/
+
+
+
+
+//MARK: Failable initializers
+/*
+struct Person {
+    var id: String
+
+    init?(id: String) {
+        if id.count == 9 {
+            self.id = id
+        } else {
+            return nil
+        }
+    }
+}
+*/
+
+
+//MARK: Typecasting
+
+/*
+class Fruit { }
+class Tomato: Fruit { }
+
+class Apple: Fruit {
+    func beRipe() {
+        print("I'm totally ripe!")
+    }
+}
+
+let fruitBowl = [Tomato(), Apple(), Tomato(), Apple()]
+
+for fruits in fruitBowl {
+    if let Apple = fruits as? Apple {
+        Apple.beRipe()
+    }
+}
+*/
+
+
+
